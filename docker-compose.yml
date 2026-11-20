@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  pulse-queue:
+    build: .
+    container_name: pulsequeue-server
+    ports:
+      - "8080:8080"
+    volumes:
+      - data-volume:/app/data
+    environment:
+      - PULSE_DB_PATH=/app/data/pulsequeue.db
+      - PULSE_WORKERS=4
+    restart: unless-stopped
+
+volumes:
+  data-volume:
