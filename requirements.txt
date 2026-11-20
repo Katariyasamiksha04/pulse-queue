@@ -1,0 +1,4 @@
+# PulseQueue Core has zero external dependencies (pure Python standard library).
+# Optional development dependencies:
+pytest>=8.0.0
+requests>=2.31.0
